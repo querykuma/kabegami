@@ -36,8 +36,6 @@ https://querykuma.github.io/kabegami
 
 # kabegami viewer
 
-It works on Google Chrome/Firefox.
-
 ## Demo
 
 https://querykuma.github.io/kabegami
