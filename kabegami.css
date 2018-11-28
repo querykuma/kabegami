@@ -1,0 +1,163 @@
+@font-face {
+ font-family: 'kabegami';
+ src: url('fonts/kabegami.ttf') format('truetype'), url('fonts/kabegami.woff') format('woff');
+ font-weight: normal;
+ font-style: normal;
+}
+html{
+  height: 100%;
+}
+body{
+  background-size: 100% 100%;
+  background-size: contain;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #888;
+  font-size: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+:focus {
+  outline: auto 2px Highlight;
+  outline: auto 5px -webkit-focus-ring-color;
+}
+#pop{
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background: #eee;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  border-radius: 5px;
+}
+div,body{margin:0}
+#popimages{
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 100%;
+  height: 100%; /* firefoxで0になる */
+  overflow: auto;
+}
+#poptop{
+ display: none;
+}
+span.img{
+  width: 15%;
+  height:  15%;
+  position: relative;
+  margin: calc(10%/12);
+  box-shadow: 0 8px 9px -5px rgba(0,0,0,.2), 0 15px 22px 2px rgba(0,0,0,.14), 0 6px 28px 5px rgba(0,0,0,.12);
+  background-size: contain;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+span.checked:after{
+ position: absolute;
+ color: red;
+ border: 1px red solid;
+ border-radius: 5px;
+ background: pink;
+ opacity: 0.9;
+ font-family: 'kabegami';
+ font-size: 2vw;
+ content: "a";
+ top: 0;
+ right: 0;
+}
+#poptop{
+ display: none;
+ width: 100%;
+ justify-content: center;
+ align-items: center;
+ background:  #3F9877;
+}
+#poptop span{
+ color:#fff;
+ font-size: 18px;
+ margin: 10px;
+}
+#del_button{
+ color:#fff;
+ font-size: 18px;
+ margin: 15px;
+ background:#B1063A;
+ padding: 5px;
+ border-radius: 5px;
+ cursor: pointer;
+}
+#l_arrow{
+  top: 50%;
+  left: 0;
+  position: absolute;
+  display: none;
+  user-select:none;
+  -moz-user-select:none;
+}
+#r_arrow{
+  top: calc(50%);
+  right: 0;
+  position: absolute;
+  display: none;
+  user-select:none;
+  -moz-user-select:none;
+}
+#debug{
+  position: absolute;
+  font-size: 15px;
+  color: red;
+  z-index: 1000;
+  right: 0;
+}
+.mycontextmenu {
+  font-size: initial;
+  display: none;
+  position: fixed;
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+  z-index: 100;
+  user-select:none;
+  -moz-user-select:none;
+}
+.mycontextmenu.show {
+  display: block;
+}
+.mycontextmenu ul {
+  list-style: none;
+  padding: 10px 0;
+}
+.mycontextmenu ul li {
+  padding: 4px 10px;
+  font-size: 90%;
+}
+.mycontextmenu ul li:not(.disabled):hover{
+  background-color: #ebebeb;
+}
+.mycontextmenu ul li.disabled{
+  color: #a1a1a1;
+}
+.sub::after{
+  content: url(parts/tenkai.png);
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: scale(0.3);
+  transform: scale(0.3);
+  left: 'auto';
+  right: 2px;
+  position: absolute;
+}
+#files{
+  display: none;
+}

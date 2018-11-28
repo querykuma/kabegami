@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>kabegami</title>
+    <meta name="description" content="jQuery kabegami viewer">
+    <meta name="author" content="QueryKuma">
+    <link rel="stylesheet" href="kabegami.css">
+    <script src="parts/jquery-3.3.1.min.js"></script>
+    <script src="kabegami_config.js"></script>
+    <script src="kabegami.js"></script>
+</head>
+
+<body>
+    <div id="pop">
+        <input type="file" id="files" name="files[]" multiple />
+        <div id="poptop">
+            <span><span id="num_images">0</span>個のサムネ画像を選択中</span>
+            <input id="del_button" type="button" value="除外">
+        </div>
+        <div id="popimages" tabindex="0"></div>
+    </div>
+
+    <img id="l_arrow" src="parts/left_arrow.png" />
+    <img id="r_arrow" src="parts/right_arrow.png" />
+
+    <div id="topcontext"></div>
+    <div id="poptopcontext"></div>
+    <div id="poptopcontext2"></div>
+    <div id="debug"></div>
+</body>
+
+</html>
